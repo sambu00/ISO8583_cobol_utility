@@ -77,7 +77,7 @@
 
       **
        PROCEDURE DIVISION USING MIO
-                                MIO-FMT
+                                FMT-MSG
                                 MP
                                 MR.
       *
