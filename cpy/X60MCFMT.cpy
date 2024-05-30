@@ -1,5 +1,5 @@
       * **++ Data elements format table
-       01 MIO-FMT.
+       01 FMT-MSG.
          03 FMT-TOT                 PIC 9(9) COMP VALUE ZERO.
       *
          03 FMT-MAP.
