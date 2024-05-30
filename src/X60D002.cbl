@@ -158,6 +158,10 @@
               PERFORM RAISE-NUMVAL-ERROR
            END-IF.
 
+           IF EFF-V-LEN EQUAL ZERO
+              PERFORM RAISE-TAG-LENGTH-ZERO-ERROR
+           END-IF.
+
       *
        PARSE-VALUE-DATA.
            IF EFF-V-LEN EQUAL ZERO
@@ -236,6 +240,14 @@
            MOVE 22                           TO MR-RESULT.
            MOVE 'ZERO length error for subscrupted MOVE'
                                              TO MR-DESCRIPTION.
+           MOVE T-BUCKET                     TO MR-POSITION.
+
+           GOBACK.
+
+      *
+      RAISE-TAG-LENGTH-ZERO-ERROR.
+           MOVE 23                           TO MR-RESULT.
+           MOVE 'ZERO length for TLV tag'    TO MR-DESCRIPTION.
            MOVE T-BUCKET                     TO MR-POSITION.
 
            GOBACK.
