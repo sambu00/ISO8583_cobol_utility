@@ -245,7 +245,7 @@
            GOBACK.
 
       *
-      RAISE-TAG-LENGTH-ZERO-ERROR.
+       RAISE-TAG-LENGTH-ZERO-ERROR.
            MOVE 23                           TO MR-RESULT.
            MOVE 'ZERO length for TLV tag'    TO MR-DESCRIPTION.
            MOVE T-BUCKET                     TO MR-POSITION.
